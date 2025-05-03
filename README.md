@@ -1,7 +1,5 @@
 # Building a Course Platform
 
-
-
 ## Tech Stack
 
 Tech Stack:
