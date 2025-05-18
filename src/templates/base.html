@@ -1,0 +1,23 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <title>{% block title %}MoJo{% endblock title %}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+    {% include "base/js.html" %}
+    
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' >
+	{% include "base/navbar.html" %}
+
+    {% block content %} 
+	
+    {% endblock content %}
+
+	{% include "base/footer.html" %}
+</body>
+</html>

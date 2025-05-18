@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to the course platform{% endblock title %}
+
+{% block content %}
+
+{% include "base/hero.html" %}
+
+
+<hr class="h-px my-8 bg-inherit mt-0 mb-0 bg-gray-200 border-0 dark:bg-gray-700">
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-9 lg:px-3">
+        <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+            <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Courses</h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">We have awsome courses.</p>
+        </div> 
+
+        <div hx-get="/courses/" hx-trigger="revealed" ></div>
+
+    </div>
+  </section>
+
+
+
+{% endblock content %}
+
+
+
